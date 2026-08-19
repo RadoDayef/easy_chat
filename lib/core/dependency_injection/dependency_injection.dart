@@ -32,7 +32,7 @@ class DependencyInjection {
     getIt.registerLazySingleton<ForgotPasswordRepo>(() => ForgotPasswordRepo());
 
     /// Cubits
-    getIt.registerLazySingleton<ThemeCubit>(() => ThemeCubit());
+    getIt.registerFactory<ThemeCubit>(() => ThemeCubit());
     getIt.registerLazySingleton<VisibilityCubit>(() => VisibilityCubit());
     getIt.registerFactory<ChatsCubit>(() => ChatsCubit(getIt<ChatsRepo>()));
     getIt.registerFactory<SignInCubit>(() => SignInCubit(getIt<SignInRepo>()));

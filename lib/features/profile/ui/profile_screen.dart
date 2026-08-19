@@ -3,6 +3,7 @@ import 'package:easy_chat/app/router/app_routes.dart';
 import 'package:easy_chat/core/shared/logic/theme_cubit.dart';
 import 'package:easy_chat/core/utils/extensions/num_extensions.dart';
 import 'package:easy_chat/features/profile/ui/widgets/profile_item_widget.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -60,7 +61,8 @@ class ProfileScreen extends StatelessWidget {
           ProfileItemWidget(
             text: "Log Out",
             icon: Icons.logout_rounded,
-            onTap: () {
+            onTap: () async {
+              await FirebaseAuth.instance.signOut();
               Navigator.pushReplacementNamed(context, AppRoutes.signIn.route);
             },
           ),

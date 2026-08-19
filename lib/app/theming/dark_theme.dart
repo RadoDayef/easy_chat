@@ -21,6 +21,10 @@ class AppDarkTheme {
       contentPadding: .symmetric(horizontal: 18, vertical: 12),
       hintStyle: TextStyle(color: AppColors.disableDarkColor, fontSize: 14, fontWeight: FontWeight.w400),
       labelStyle: TextStyle(color: AppColors.disableDarkColor, fontSize: 14, fontWeight: FontWeight.w500),
+      border: OutlineInputBorder(
+        borderRadius: .circular(15),
+        borderSide: BorderSide(color: AppColors.disableDarkColor, width: 1.5),
+      ),
       enabledBorder: OutlineInputBorder(
         borderRadius: .circular(15),
         borderSide: BorderSide(color: AppColors.disableDarkColor, width: 1.5),

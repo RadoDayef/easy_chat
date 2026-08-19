@@ -1,9 +1,11 @@
 import 'package:easy_chat/app/router/app_router.dart';
+import 'package:easy_chat/app/router/app_routes.dart';
 import 'package:easy_chat/app/theming/dark_theme.dart';
 import 'package:easy_chat/app/theming/light_theme.dart';
 import 'package:easy_chat/core/shared/logic/theme_cubit.dart';
 import 'package:easy_chat/core/utils/constants/app_constants.dart';
 import 'package:easy_chat/core/utils/extensions/context_extensions.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -29,6 +31,7 @@ class EasyChat extends StatelessWidget {
           title: AppConstants.appName,
           darkTheme: AppDarkTheme.theme,
           debugShowCheckedModeBanner: false,
+          initialRoute: FirebaseAuth.instance.currentUser != null ? AppRoutes.home.route : AppRoutes.onBoarding.route,
           onGenerateRoute: AppRouter.onGeneratedRoute,
         );
       },

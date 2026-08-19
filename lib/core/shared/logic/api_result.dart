@@ -6,8 +6,8 @@ class ApiResultSuccess<T> extends ApiResult<T> {
   ApiResultSuccess(this.data);
 }
 
-class ApiResultError<T> extends ApiResult<T> {
+class ApiResultFailure<T> extends ApiResult<T> {
   final String message;
 
-  ApiResultError(this.message);
+  ApiResultFailure(this.message);
 }

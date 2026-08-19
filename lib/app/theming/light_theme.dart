@@ -17,6 +17,10 @@ class AppLightTheme {
     ),
     inputDecorationTheme: InputDecorationTheme(
       contentPadding: .symmetric(horizontal: 18, vertical: 12),
+      border: OutlineInputBorder(
+        borderRadius: .circular(15),
+        borderSide: BorderSide(color: AppColors.disableLightColor, width: 1.5),
+      ),
       enabledBorder: OutlineInputBorder(
         borderRadius: .circular(15),
         borderSide: BorderSide(color: AppColors.disableLightColor, width: 1.5),
@@ -24,6 +28,14 @@ class AppLightTheme {
       focusedBorder: OutlineInputBorder(
         borderRadius: .circular(15),
         borderSide: BorderSide(color: AppColors.primaryLightColor, width: 1.7),
+      ),
+      errorBorder: OutlineInputBorder(
+        borderRadius: .circular(15),
+        borderSide: BorderSide(color: AppColors.redColor, width: 1.5),
+      ),
+      focusedErrorBorder: OutlineInputBorder(
+        borderRadius: .circular(15),
+        borderSide: BorderSide(color: AppColors.redColor, width: 1.7),
       ),
     ),
     fontFamily: "Poppins",
