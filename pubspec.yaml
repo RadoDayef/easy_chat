@@ -1,0 +1,42 @@
+name: easy_chat
+description: "Easy Chat Project"
+publish_to: "none"
+
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.13.0
+
+dependencies:
+  flutter:
+    sdk: flutter
+  get_it: ^9.2.1
+  intl: ^0.20.3
+  flutter_bloc: ^9.1.1
+  cupertino_icons: ^1.0.8
+  cached_network_image: ^3.4.1
+  flutter_native_splash: ^2.4.7
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/images/
+  fonts:
+    - family: Poppins
+      fonts:
+        - asset: assets/fonts/Poppins-Regular.ttf
+
+flutter_native_splash:
+  ios: true
+  web: false
+  android: true
+  color: "#771F98"
+  image: assets/images/splash icon.png
+  android_12:
+    color: "#771F98"
+    image: assets/images/splash icon.png
